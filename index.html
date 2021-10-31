@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+    <style>
+        body {
+            background-image: url(book.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            color:white;
+        }
+        
+        .success,
+        .error {
+            color: white;
+            padding: 5px;
+            margin: 5px 0 15px 0;
+        }
+        
+        .success {
+            background: green;
+        }
+        
+        .error {
+            background: red;
+        }
+        .bookadd{
+            background-color: rgba(253, 195, 119, 0.919) !important;
+            box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.8);
+            font-weight:bold !important;
+            font-size: 13px !important;
+            text-shadow: 1px 1px black;
+          
+        }
+        .bookadd:hover {
+            background: rgb(95, 247, 57) !important;
+        }
+        #title:hover,#author:hover,#isbn:hover{
+            border:4px solid rgb(94, 220, 248);
+            border-radius:5px;
+        }
+        a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .cross{
+           background:rgb(248, 143, 143);
+           font-weight:bold;
+           border: 2px solid rgb(202, 253, 130);
+        }
+        .Author{
+           border:1px solid white;
+           font-weight:bold;
+           box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.8);
+        }
+        .Title{
+        box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.8);
+        border:1px solid white;
+        padding:7px !important;
+        font-weight:bold;
+        }
+        .Isbn{
+            box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.8);
+            border:1px solid white;
+            font-weight:bold;
+        }
+        .rb{
+            font-weight:bold;
+            color:black;
+            font-size:16px;
+        }
+        @media (max-width:576px){
+            body{
+                background-color:black !important;
+            }
+            .cross{
+                text-align:left;
+                padding-left:2px;
+                font-weight:light;
+            }
+        }
+    </style>
+    <title>Book List</title>
+</head>
+   
+<body>
+    <div class="container">
+        <h1 class="head">Add Book 📚</h1>
+        <form id="book-form">
+            <div>
+                <label for="title">Title 📖</label>
+                <input type="text" id="title" class="u-full-width">
+            </div>
+            <div>
+                <label for="author">Author 🙎‍♂️</label>
+                <input type="text" id="author" class="u-full-width">
+            </div>
+            <div>
+                <label for="isbn">ISBN# 🖋</label>
+                <input type="text" id="isbn" class="u-full-width">
+            </div>
+            <div>
+                <input type="submit" value="Submit" class="bookadd  u-full-width">
+            </div>
+        </form>
+        <table class="u-full-width">
+            <thead style="background:rgb(22, 248, 143)" class="rb">
+                <tr>
+                    <th>Title 📔</th>
+                    <th>Author 🙍‍♂️</th>
+                    <th>ISBN 🖊</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
+
+    <script src="ES6JS.js"></script>
+</body>
